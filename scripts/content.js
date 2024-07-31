@@ -10,10 +10,15 @@ function containsTerms(text, terms) {
 const textContent = document.body.textContent || document.body.innerText;
 
 if (containsTerms(textContent, terms)) {
-  chrome.storage.local.set({ termsDetected: true });
+  chrome.storage.local.set({ termsDetected: true }, () => {
+    console.log('Terms detected and stored');
+  });
 } else {
-  chrome.storage.local.set({ termsDetected: false });
+  chrome.storage.local.set({ termsDetected: false }, () => {
+    console.log('No terms detected and stored');
+  });
 }
+
 
 /*
 if (containsTerms(textContent, terms)) {
