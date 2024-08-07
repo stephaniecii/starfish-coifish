@@ -10,7 +10,7 @@
     "128": "images/icon-128.png"
   },
   "permissions": [
-    "storage"
+    "storage", "activeTab", "scripting"
   ],
   "action": {
     "default_popup": "popup.html"
