@@ -13,7 +13,7 @@ function containsTerms(text, terms) {
 // Function to handle detection and storage
 function handleDetection() {
   const textContent = document.body.textContent || document.body.innerText;
-  console.log(textContent);
+//  console.log(textContent);
 
   if (containsTerms(textContent, terms)) {
     chrome.storage.local.set({ termsDetected: true }, () => {
