@@ -1,5 +1,5 @@
 //terms array
-const terms = ["Terms of Service", "TOS", "Privacy Policy", "Terms and Conditions, User Agreements"];
+const terms = ["Terms of Service", "TOS", "Privacy Policy", "Terms and Conditions", "User Agreements"];
 
 // Function to check if any of the terms appear in the text content of the document
 function containsTerms(text, terms) {
