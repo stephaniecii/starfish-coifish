@@ -8,6 +8,7 @@ function containsTerms(text, terms) {
 
 // Get the text content of the entire document
 const textContent = document.body.textContent || document.body.innerText;
+console.log(textContent)
 
 if (containsTerms(textContent, terms)) {
   chrome.storage.local.set({ termsDetected: true }, () => {
