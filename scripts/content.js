@@ -97,12 +97,12 @@ const observer = new MutationObserver((mutations) => {
 // formatting --> observer.observe(targetNode, options);
 observer.observe(document.body, { childList: true, subtree: true });
 
-/*
+
 if (containsTerms(textContent, terms)) {
   console.log("Terms detected!");
   
   //add acttions here
 }
-*/
+
 
 */
