@@ -1,6 +1,8 @@
-chrome.storage.local.set({ termsDetected: false }, () => {
+/*chrome.storage.local.set({ termsDetected: false }, () => {
     console.log('Yo');
   });
+
+*/
 
 // List of terms to detect
 const terms = ["Terms of Service", "TOS", "Privacy Policy", "Terms and Conditions", "User Agreements"];
