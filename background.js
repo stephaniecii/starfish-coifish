@@ -1,8 +1,14 @@
 // background.js
+const terms = ["Terms of Service", "TOS", "Privacy Policy", "Terms and Conditions", "User Agreements"];
 
+// Function to check if any of the terms appear in the text content of the document
+function containsTerms(text, terms) {
+  return terms.some(term => text.includes(term));
+}
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.textContent) {
     const textContent = message.textContent;
+    
 
     if (containsTerms(textContent, terms)) {
       chrome.storage.local.set({ termsDetected: true }, () => {
