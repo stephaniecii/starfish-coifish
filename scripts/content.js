@@ -21,11 +21,14 @@ function handleDetection() {
     chrome.storage.local.set({ termsDetected: true }, () => {
       console.log('Terms detected and stored');
     });
+    chrome.runtime.sendMessage({termsDetected: true});
   } else {
     chrome.storage.local.set({ termsDetected: false }, () => {
       console.log('No terms detected and stored');
     });
+    chrome.runtime.sendMessage({termsDetected: false});
   }
+    
 }
 
 // Initial detection when the script runs
